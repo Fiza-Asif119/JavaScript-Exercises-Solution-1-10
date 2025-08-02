@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EXCERCISE 1-10</title>
+    <style>
+        /* q6,7 */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: #d626a1;
+        }
+
+        .box {
+            flex: 1 1 200px;
+            height: 150px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            border-radius: 10px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box red">Red Box</div>
+        <div class="box green">Green Box</div>
+        <div class="box blue">Blue Box</div>
+    </div>
+
+
+
+    <script>
+        /*   // CHP#1
+           // q1
+           alert('HELLO! welcome to our web!');
+           // q2
+           alert('Error! please enter a valid password.')
+           // q3
+           alert('Welcome to JS Land..\nHappy Coding!')
+           // q4
+           alert('Welcome to JS Land.')
+           alert('Happy Coding!')
+           // q5
+           alert("Hello... i can run this JS alert through web browser's console")
+   
+   
+           // CHP#2
+           // q1
+           var username
+           // q2
+           var myname = "fiza"
+           console.log(myname)
+           // q3
+           var message = "Hello World!"
+           alert(message);
+           // q4
+           var sname = "john doe"
+           var sage = "15 yr old"
+           var scourse = "certified mobile application development"
+           alert(sname);
+           alert(sage);
+           alert(scourse);
+           // q5
+           let pizza = "PIZZA\nPIZZ\nPIZ\nPI\nP";
+           alert(pizza);
+           // q6
+           var email = "fiza@gmail.com"
+           alert('My E-mail address is ' + email)
+           // q7
+           var book = "a smarter way to learn javascript"
+           alert('i am trying to learn from a book ' + book);
+           // q8
+           document.write("<h1>yah! i can write HTML content throgh JavaScript!</h1>");
+           // q9
+           var decorativestring = ('▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬')
+           alert(decorativestring);
+           document.write("<h1>▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬</h1>"); */
+
+
+        /* // CHP#3
+         // q1
+         var age = '17'
+         alert('i am ' + age + ' old');
+         // q2
+         var visitednum = '14'
+         alert('you have visited this website ' + visitednum + ' times');
+         // q3
+         var birthyear = '2008'
+         document.write("<h1>my birthyear is 2008.</h1>");
+         document.write("<h1>datatype of my declared variable is number.</h1>");
+         // q4
+         var visitorName = "John Doe";
+         var productTitle = "T-shirt";
+         var quantity = 5;
+         document.write("<strong>" + visitorName + "</strong> ordered <strong>" + quantity + " " + productTitle + "(s)</strong> on XYZ Clothing store.");*/
+
+        // CHP#4
+        /* // q1
+        var firstName = "John", age = 25, isStudent = true;
+
+        // q2
+        // 5 legal variable names
+        var $name, _age, user1, myVariable, fullName;
+
+        // 5 illegal variable names
+        var 1user, full - name, var, alert, first name; */
+        // q3
+        /*document.write("<h1>Rules for naming JS variables</h1>");
+        document.write("<p>b) Variable names can only contain <strong>letters</strong>, <strong>numbers</strong>, <strong>$</strong>, and <strong>_</strong>. <br>For example: <code>$my_1stVariable</code></p>");
+        document.write("<p>c) Variables must begin with a <strong>letter</strong>, <strong>$</strong> or <strong>_</strong>. <br>For example: <code>$name</code>, <code>_name</code> or <code>name</code></p>");
+        document.write("<p>d) Variable names are case <strong>sensitive</strong></p>");
+        document.write("<p>e) Variable names should not be JS <strong>keywords</strong></p>");
+
+
+        // CHP#5
+        // q1
+        let num1 = prompt('Enter first number');
+        let num2 = prompt('Enter second number');
+
+        num1 = Number(num1);
+        num2 = Number(num2);
+
+        let sum = num1 + num2;
+
+        document.write("<h2>The sum of " + num1 + " and " + num2 + " is " + sum + ".</h2>");
+
+
+        // q2
+        let sum = num1 + num2;
+        let difference = num1 - num2;
+        let product = num1 * num2;
+        let division = num1 / num2;
+        let modulus = num1 % num2;
+
+        document.write("<h2>Results:</h2>");
+        document.write("Sum: " + sum + "<br>");
+        document.write("Subtraction: " + difference + "<br>");
+        document.write("Multiplication: " + product + "<br>");
+        document.write("Division: " + division + "<br>");
+        document.write("Modulus (Remainder): " + modulus + "<br>");
+
+
+        // q3
+        var num
+
+        document.write("Value after variable declaration is " + num + "<br>")
+
+        num = 5;
+
+        document.write("Initial value = " + num + "<br>");
+
+        num++;
+
+        document.write("value after increment is: " + num + "<br>");
+
+        num = num + 7;
+
+        document.write("Value after adding 7 is: " + num + "<br>");
+
+        num--;
+
+        document.write("value after decrement is: " + num + "<br>");
+
+        var remainder = num % 3;
+        document.write("The remainder is: " + remainder + "<br>");
+
+
+        // q4
+        var ticketPrice = 600;
+        var quantity = 5;
+        var total = ticketPrice * quantity;
+        document.write("<h2>Total cost to buy " + quantity + " tickets is " + total + " PKR</h2>");
+
+
+        // q5
+        document.write("<h2>Table of 4</h2>");
+        let tableNumber = 4;
+
+        for (let i = 1; i <= 10; i++) {
+            document.write(tableNumber + " x " + i + " = " + (tableNumber * i) + "<br>");
+        }
+
+        // q6
+        // a. Store a Celsius temperature
+        let celsius = 25;
+
+        // b. Convert to Fahrenheit
+        let fahrenheitFromCelsius = (celsius * 9 / 5) + 32;
+
+        // Output
+        document.write(celsius + "°C is " + fahrenheitFromCelsius + "°F <br>");
+
+        // c. Store a Fahrenheit temperature
+        let fahrenheit = 70;
+
+        // d. Convert to Celsius
+        let celsiusFromFahrenheit = (fahrenheit - 32) * 5 / 9;
+
+        // Output:
+        document.write(fahrenheit + "°F is " + celsiusFromFahrenheit.toFixed(3) + "°C");
+
+
+
+        // q7
+        var price1 = 650;
+        var price2 = 100;
+        var quantity1 = 3;
+        var quantity2 = 7;
+        var shippingCharges = 100;
+
+        var totalCost = (price1 * quantity1) + (price2 * quantity2) + shippingCharges;
+
+        document.write("<h2>Shopping Receipt</h2>");
+        document.write("Price of item 1 is " + price1 + " PKR<br>");
+        document.write("Quantity of item 1 is " + quantity1 + "<br>");
+        document.write("Price of item 2 is " + price2 + " PKR<br>");
+        document.write("Quantity of item 2 is " + quantity2 + "<br>");
+        document.write("Shipping Charges: " + shippingCharges + " PKR<br><br>");
+        document.write("<strong>Total Cost: " + totalCost + " PKR</strong>");
+
+
+        //q8
+        var totalMarks = 980;
+        var obtainedMarks = 804;
+
+        var percentage = (obtainedMarks / totalMarks) * 100;
+
+        document.write("Total Marks = " + totalMarks + "<br>");
+        document.write("Obtained Marks = " + obtainedMarks + "<br>");
+        document.write("Percentage = " + percentage + "%" + "<br>");
+
+
+        // q9
+        var totalPKR = (10 * 104.80) + (25 * 28);
+
+        document.write("Total Currency in PKR: " + totalPKR);
+
+
+        // q10
+        var number = 10;
+        var result = ((number + 5) *10) / 2;
+        console.log("Result:", result);
+
+
+        // q11
+        var currentYear = 2025;
+        var birthYear = 2008;
+
+        var age1 = currentYear - birthYear;
+        var age2 = age1 - 1;
+
+        console.log("They are either " + age2 + " yr old or " + age1 +" Year old");*/
+
+
+        // q10
+        var snack = "fries";
+        var currentAge = 17;
+        var maxAge = 40;    
+        var amountPerDay = 2;        
+
+        var yearsRemaining = maxAge - currentAge;
+        var totalSnacks = yearsRemaining * 365 * amountPerDay;
+
+        document.write("You will need <strong>" + totalSnacks + "</strong> " + snack +
+            " to last you until the ripe old age of <strong>" + maxAge + "</strong>.");
+
+
+
+
+
+    </script>
+</body>
+
+</html>
