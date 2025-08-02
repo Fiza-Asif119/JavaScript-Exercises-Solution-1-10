@@ -271,20 +271,316 @@
         var age1 = currentYear - birthYear;
         var age2 = age1 - 1;
 
-        console.log("They are either " + age2 + " yr old or " + age1 +" Year old");*/
+        console.log("They are either " + age2 + " yr old or " + age1 +" Year old");
 
 
         // q10
         var snack = "fries";
         var currentAge = 17;
-        var maxAge = 40;    
-        var amountPerDay = 2;        
+        var maxAge = 40;
+        var amountPerDay = 2;
 
         var yearsRemaining = maxAge - currentAge;
         var totalSnacks = yearsRemaining * 365 * amountPerDay;
 
-        document.write("You will need <strong>" + totalSnacks + "</strong> " + snack +
-            " to last you until the ripe old age of <strong>" + maxAge + "</strong>.");
+        document.write("You will need <strong>" + totalSnacks + "</strong> " + snack + " to last you until the ripe old age of <strong>" + maxAge + "</strong>.");
+
+
+
+        // chp#6
+        // q1
+        var a = 10;
+        document.write("The value of a is : " + a + "<br>");
+        document.write("..................................." + "<br>");
+
+        document.write("The value of ++a is : " + (++a) + "<br>");
+        document.write("now the value of a is : " + a + "<br><br>");
+
+        document.write("The value of ++a is : " + (a++) + "<br>");
+        document.write("now the value of a is : " + a + "<br><br>");
+
+        document.write("The value of ++a is : " + (--a) + "<br>");
+        document.write("now the value of a is : " + a + "<br><br>");
+
+        document.write("The value of ++a is : " + (a--) + "<br>");
+        document.write("now the value of a is : " + a + "<br><br>");
+
+
+        // q2
+        var a = 2;
+        var b = 1;
+
+        var result = --a - --b + ++b + b--;
+
+        document.write("a is : " + a + "<br>");
+        document.write("b is : " + b + "<br>");
+        document.write("result is : " + result + "<br>");
+
+
+        // q3
+        var name = prompt("Please enter your name:");
+        console.log("Hello, " + name + "! Welcome!");
+        alert("Hello, " + name + "! Welcome!");
+
+
+        // q4
+        // q5
+        let input = prompt("Enter a number to display its multiplication table:", "5");
+
+        let number = parseInt(input);
+
+        if (isNaN(number)) {
+            number = 5;
+        }
+
+        document.write("<h2>Multiplication Table of " + number + "</h2>");
+        for (let i = 1; i <= 10; i++) {
+            document.write(number + " x " + i + " = " + (number * i) + "<br>");
+        }
+
+
+        // q6
+        let subject1 = prompt("Enter name of 1st subject:");
+        let subject2 = prompt("Enter name of 2nd subject:");
+        let subject3 = prompt("Enter name of 3rd subject:");
+
+        let totalMarksPerSubject = 100;
+
+        let marks1 = Number(prompt("Enter obtained marks for " + subject1 + ":"));
+        let marks2 = Number(prompt("Enter obtained marks for " + subject2 + ":"));
+        let marks3 = Number(prompt("Enter obtained marks for " + subject3 + ":"));
+
+        let percent1 = (marks1 / totalMarksPerSubject) * 100;
+        let percent2 = (marks2 / totalMarksPerSubject) * 100;
+        let percent3 = (marks3 / totalMarksPerSubject) * 100;
+
+        let totalObtained = marks1 + marks2 + marks3;
+        let totalMarks = totalMarksPerSubject * 3;
+        let overallPercent = (totalObtained / totalMarks) * 100;
+
+        document.write("<table border='1' cellpadding='10'>");
+        document.write("<tr><th>Subject</th><th>Total Marks</th><th>Obtained Marks</th><th>Percentage</th></tr>");
+        document.write("<tr><td>" + subject1 + "</td><td>" + totalMarksPerSubject + "</td><td>" + marks1 + "</td><td>" + percent1.toFixed(2) + "%</td></tr>");
+        document.write("<tr><td>" + subject2 + "</td><td>" + totalMarksPerSubject + "</td><td>" + marks2 + "</td><td>" + percent2.toFixed(2) + "%</td></tr>");
+        document.write("<tr><td>" + subject3 + "</td><td>" + totalMarksPerSubject + "</td><td>" + marks3 + "</td><td>" + percent3.toFixed(2) + "%</td></tr>");
+        document.write("<tr><th>Total</th><th>" + totalMarks + "</th><th>" + totalObtained + "</th><th>" + overallPercent.toFixed(2) + "%</th></tr>");
+        document.write("</table>"); 
+
+
+        // q7
+
+
+
+        // chp9-10
+        // q1
+        var city = prompt('Enter your city name!');
+        if(city === "karachi") {
+            alert("Welcome to city of lights!")
+        } 
+
+        // q2
+        var gender = prompt('Enter your gender!');
+        if(gender === "male") {
+            alert("good morning sir.")
+        }
+        if(gender === "female") {
+            alert("good morning mam.")
+        } 
+
+
+        // q3
+        var signalColor = prompt('Enter signal color!');
+        if(signalColor === "red") {
+            alert("must stop.")
+        }
+        if(signalColor === "yellow") {
+            alert("ready to stop.")
+        }
+        if(signalColor === "green") {
+            alert("move now.")
+        } 
+
+
+        // q4
+        var fuel = prompt('Enter remaining fuel in car (in liters)');
+        if(fuel <= 0.25) {
+            alert("pleasse refill the fuel in your car.")
+        }
+        if(fuel >= "0.26") {
+            alert("fuel is in good amount.")
+        } 
+
+
+        // q5
+        var a = 4;
+        if (++a === 5){
+            alert("given condition for " + a + " is true");
+        }
+        var b = 82;
+        if (b++ === 83){
+            alert("given condition for " + b + " is true");
+        }
+        var c = 12;
+        if (c++ === 13){
+            alert("given condition 1 for " + c + " is true");
+        }
+        if (c === 13){
+            alert("condition 2 for " + c + " is true");
+        }
+        if (++c < 14){
+            alert("condition 3 for " + c + " is true");
+        }
+        if (c === 14){
+            alert("condition 4 for " + c + " is true");
+        }
+
+        var materialCost = 20000;
+        var laborCost = 2000;
+        var totalCost = materialCost + laborCost;
+        if (totalCost === laborCost + materialCost){
+            alert("The cost equals");
+        }
+
+        if (true){
+            alert("True");
+        }
+        if (false){
+            alert("False");
+        }
+
+        if ("car"<"cat"){
+            alert("car is smaller than cat");
+        } 
+
+
+        // q6
+        let marksof3 = Number(prompt("Enter Obtained marks of 3 subjects:"));
+        let totalMarksof3 = Number(prompt("Enter Total marks of 3 subjects:"));
+        let percentage = Number(prompt("Enter percentage:"));
+
+        
+        document.write("Marks Sheet"+"<br><br>");
+        if(percentage >= 80){
+            document.write("Marks Obtained : " + marksof3 + "<br>");
+            document.write("Total Marks : " + totalMarksof3 + "<br>");
+            document.write("Percentage : " + percentage + "<br>");
+            document.write("Grade : " + "A-one" + "<br>");
+            document.write("Remarks : " + "Excellent" + "<br><br>");
+        }
+        if(percentage < 60){
+            document.write("Marks Obtained : " + marksof3 + "<br>");
+            document.write("Total Marks : " + totalMarksof3 + "<br>");
+            document.write("Percentage : " + percentage + "<br>");
+            document.write("Grade : " + "Fail" + "<br>");
+            document.write("Remarks : " + "Sorry" + "<br><br>");
+        }
+        if(percentage >= 60){
+            document.write("Marks Obtained : " + marksof3 + "<br>");
+            document.write("Total Marks : " + totalMarksof3 + "<br>");
+            document.write("Percentage : " + percentage + "<br>");
+            document.write("Grade : " + "B" + "<br>");
+            document.write("Remarks : " + "You need to improve" + "<br><br>");
+        }
+        if(percentage >= 70){
+            document.write("Marks Obtained : " + marksof3 + "<br>");
+            document.write("Total Marks : " + totalMarksof3 + "<br>");
+            document.write("Percentage : " + percentage + "<br>");
+            document.write("Grade : " + "A" + "<br>");
+            document.write("Remarks : " + "Good" + "<br><br>");
+        } 
+
+
+        // q7
+        var sNum = 9;
+        var numS = Number(prompt("guess the secret number from 1-10"));
+
+        if(numS === sNum){
+            alert("Bingo!");
+        }
+        if(numS <= 9){
+            alert("a little far!");
+        }
+        if(numS >= 9){
+            alert("close!");
+        } 
+
+
+        // q8
+        let number = prompt("Enter a number:");
+
+        number = Number(number);
+
+        if (number % 3 === 0) {
+            alert("The number is divisible by 3.");
+        } 
+
+
+        // q9
+        let number = prompt("Enter a number:");
+
+        number = Number(number);
+
+        if (number % 2 === 0) {
+            alert("The number is even.");
+        } else {
+            alert("The number is odd.");
+        } 
+
+
+        // q10
+        var temperature = +prompt("Enter the temperature:");
+
+        if (temperature > 40) {
+            alert("It is too hot outside.");
+        } else if (temperature > 30) {
+            alert("The Weather today is Normal.");
+        } else if (temperature > 20) {
+            alert("Today’s Weather is cool.");
+        } else if (temperature > 10) {
+            alert("OMG! Today’s weather is so Cool.");
+        } else {
+            alert("It’s freezing!");
+        } */
+
+
+
+        // q11
+        var num1 = +prompt("Enter the first number:");
+        var num2 = +prompt("Enter the second number:");
+        var operator = prompt("Enter operation (+, -, *, /, %):");
+        var result;
+
+        if (operator === "+") {
+            result = num1 + num2;
+        } else if (operator === "-") {
+            result = num1 - num2;
+        } else if (operator === "*") {
+            result = num1 * num2;
+        } else if (operator === "/") {
+            if (num2 !== 0) {
+                result = num1 / num2;
+            } else {
+                result = "Cannot divide by zero";
+            }
+        } else if (operator === "%") {
+            if (num2 !== 0) {
+                result = num1 % num2;
+            } else {
+                result = "Cannot mod by zero";
+            }
+        } else {
+            result = "Invalid operator!";
+        }
+
+        alert("Result: " + result);
+
+
+
+
+
+
+
+
 
 
 
